@@ -1,8 +1,18 @@
+:root {
+  --main-bg-color: #003b59;
+  --main-bg-color-dark: #001530;
+}
+
 /* Others */
+body {
+  font-family: "Montserrat", "Roboto", Arial, sans-serif;
+}
+
 p {
   text-align: justify;
   text-justify: inter-word;
   max-width: 1024px;
+  font-size: 16px;
 }
 
 .material-symbols-outlined {
@@ -34,18 +44,28 @@ p {
 }
 
 .space-blue-bg {
-  background-color: #003b59;
+  background-color: var(--main-bg-color);
 }
 
 .space-blue-bg-dark {
-  background-color: #001530;
+  background-color: var(--main-bg-color-dark);
 }
 
+.font-space-blue {
+  color: var(--main-bg-color);
+}
+
+.font-white {
+  color: white;
+}
+
+button:focus,
 .btn:focus {
   outline: none;
   box-shadow: none;
 }
 
+/* Light and Dark Mode Button */
 #theme-switch {
   width: 130px;
 }
@@ -60,6 +80,7 @@ p {
   color: white;
 }
 
+/* Back to top floating button */
 #floating-up-button {
   padding: 8px;
   height: 40px;
@@ -74,6 +95,38 @@ p {
 
 #floating-up-button:hover {
   cursor: pointer;
+}
+
+/* Font Resizer Floating Component */
+#container-font-size {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+}
+
+.btn-font-size {
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  font-size: 30px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+#input-font-size {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  color: black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* Top Container */
