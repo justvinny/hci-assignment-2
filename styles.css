@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --main-bg-color: #003b59;
   --main-bg-color-dark: #001530;
