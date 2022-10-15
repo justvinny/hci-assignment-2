@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Functions
-  const isTopOfPage = () => {
-    return $(document).scrollTop() <= 300;
-  };
+  const isIntroductionVisible = () =>
+    $(document).scrollTop() >= $("#introduction").offset().top;
+
+  const isAboutUsVisible = () =>
+  ($(document).scrollTop() + $(window).height()) >= $("#about-us").offset().top;
 
   const doesFloatingUpButtonExist = () => {
     return document.getElementById("floating-up-button") != null;
@@ -23,6 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const createFontOptionsToggler = () => {
+    const upButton = $(
+      `<button class="${getBackgroundColor()}" id="floating-font-options-toggle"><span class="material-symbols-outlined">visibility</span></button>`
+    );
+    upButton.click(toggleFontOptionsVisibility);
+    return upButton;
+  };
+
+  const toggleFontOptionsVisibility = () => {
+    if (isFontOptionsVisible()) {
+      $("div#container-font-size").css("visibility", "hidden");
+      $("select.font-family").css("visibility", "hidden");
+      $("button#floating-font-options-toggle > span").text("visibility_off");
+    } else {
+      $("div#container-font-size").css("visibility", "visible");
+      $("select.font-family").css("visibility", "visible");
+      $("button#floating-font-options-toggle > span").text("visibility");
+    }
+  }
+
+  const isFontOptionsVisible = () => {
+    return $("div#container-font-size").css("visibility") === "visible" && $("select.font-family").css("visibility") === "visible";
+  }
+  
   const createFontSizeAdjuster = () => {
     const inputFontSize = $(
       `<input id="input-font-size" disabled value="${fontSize}">`
@@ -82,17 +108,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const changeFontFamily = (event) => {
     fontFamily = event.currentTarget.value;
     window.localStorage.setItem(FONT_FAMILY_KEY, fontFamily);
-    $("p,a,span:not(.material-symbols-outlined)").css("font-family", `${fontFamily}`);
-  }
+    $("p,a,span:not(.material-symbols-outlined)").css(
+      "font-family",
+      `${fontFamily}`
+    );
+  };
 
   // Scroll Event
   document.addEventListener("scroll", () => {
-    if (!isTopOfPage() && !doesFloatingUpButtonExist()) {
+    if (isIntroductionVisible() && !isAboutUsVisible() && !doesFloatingUpButtonExist()) {
       $("body").append(createFloatingUpButton());
+      $("body").append(createFontOptionsToggler());
       $("body").append(createFontSizeAdjuster());
       $("body").append(createFontPicker());
-    } else if (isTopOfPage() && doesFloatingUpButtonExist()) {
+    } else if ((!isIntroductionVisible() || isAboutUsVisible()) && doesFloatingUpButtonExist()) {
       $("button#floating-up-button").remove();
+      $("button#floating-font-options-toggle").remove();
       $("div#container-font-size").remove();
       $("select.font-family").remove();
     }

@@ -1,8 +1,3 @@
-@font-face {
-  font-family: open-dyslexic-mono;
-  src: url("./fonts/OpenDyslexicMono-Regular.otf");
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -107,6 +102,19 @@ select {
   cursor: pointer;
 }
 
+/* Show or Hide font options floating buton */
+#floating-font-options-toggle {
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 24px;
+  right: 74px;
+  border-radius: 50%;
+  border: 0px;
+  color: white;
+}
+
 /* Font Resizer Floating Component */
 #container-font-size {
   position: fixed;
@@ -145,16 +153,16 @@ select.font-family {
   height: 40px;
   position: fixed;
   bottom: 24px;
-  right: 84px;
+  right: 124px;
 }
 
 /* Top Container */
 #top-container {
-  height: 600px;
+  min-height: 600px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 0rem 1rem 1rem 1rem;
+  padding: 0rem 1rem 3rem 1rem;
   justify-content: center;
   align-items: center;
   color: white;
@@ -215,6 +223,11 @@ select.font-family {
   font-weight: bold;
   overflow-wrap: anywhere;
   text-align: center;
+}
+
+@font-face {
+  font-family: open-dyslexic-mono;
+  src: url("./fonts/OpenDyslexicMono-Regular.otf");
 }
 
 @media only screen and (max-width: 900px) {

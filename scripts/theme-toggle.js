@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
       $("button#floating-up-button")
         ?.removeClass("space-blue-bg")
         .addClass("space-blue-bg-dark");
+      $("button#floating-font-options-toggle")
+        ?.removeClass("space-blue-bg")
+        .addClass("space-blue-bg-dark");
       $("button.btn-font-size")
         ?.removeClass("space-blue-bg")
         .addClass("space-blue-bg-dark");
@@ -45,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
       $("button#floating-up-button")
         ?.removeClass("space-blue-bg-dark")
         .addClass("space-blue-bg");
+      $("button#floating-font-options-toggle")
+        ?.removeClass("space-blue-bg-dark")
+        .addClass("space-blue-bg");
       $("button.btn-font-size")
         ?.removeClass("space-blue-bg-dark")
         .addClass("space-blue-bg");
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.localStorage.setItem(IS_DARK_MODE_KEY, isDarkMode);
     displayTheme();
   };
- 
+
   // Main
   displayTheme();
   $("#theme-switch").click(toggleTheme);
