@@ -1,3 +1,8 @@
+@font-face {
+  font-family: open-dyslexic-mono;
+  src: url("./fonts/OpenDyslexicMono-Regular.otf");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -64,14 +69,16 @@ p {
 }
 
 button:focus,
-.btn:focus {
+.btn:focus,
+select {
   outline: none;
   box-shadow: none;
 }
 
 /* Light and Dark Mode Button */
 #theme-switch {
-  width: 130px;
+  min-width: 130px;
+  padding-left: 8px;
 }
 
 .theme-light {
@@ -131,6 +138,15 @@ button:focus,
   color: black;
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+
+/* Font Family Select */
+select.font-family {
+  padding: 4px;
+  height: 40px;
+  position: fixed;
+  bottom: 24px;
+  right: 84px;
 }
 
 /* Top Container */

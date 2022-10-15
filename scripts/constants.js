@@ -5,10 +5,21 @@ const FONT_SIZE_KEY = "16";
 const DEFAULT_FONT_SIZE = 16;
 const MAX_FONT_SIZE = 32;
 const MIN_FONT_SIZE = 12;
+const FONT_FAMILY_KEY = "fontFamily";
+const DEFAULT_FONT_FAMILY = '"Montserrat"';
 const SECTIONS_LIST = [
   "introduction",
   "method",
   "findings",
   "qualitative-analysis",
   "conclusion",
+];
+const FONT_FAMILY_LIST = [
+  { value: "Arial", text: "Arial" },
+  { value: '"Courier New"', text: "Courier New" },
+  { value: "Helvetica", text: "Helvetica" },
+  { value: '"Montserrat"', text: "Montserrat" },
+  { value: "open-dyslexic-mono", text: "Open Dyslexic Mono" },
+  { value: '"Roboto"', text: "Roboto" },
+  { value: '"Times New Roman"', text: "Times New Roman" },
 ];

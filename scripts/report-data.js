@@ -120,4 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set Font Size
   $("p").css("font-size", `${fontSize}px`);
+
+  // Set Font Family
+  $("p,a,span:not(.material-symbols-outlined)").css("font-family", fontFamily);
 });

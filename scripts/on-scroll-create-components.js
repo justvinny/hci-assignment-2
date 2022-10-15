@@ -62,14 +62,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const createFontPicker = () => {
+    const fontPicker = $(`<select class="font-family">
+    ${FONT_FAMILY_LIST.map(
+      (fontFamilyElement) =>
+        `<option value='${fontFamilyElement.value}'${addOptionSelectedIfMatch(
+          fontFamilyElement.value
+        )}>${fontFamilyElement.text}</option>`
+    )}
+  </select>`);
+    fontPicker.on("change", changeFontFamily);
+    return fontPicker;
+  };
+
+  const addOptionSelectedIfMatch = (passedFontFamily) => {
+    return passedFontFamily === fontFamily ? " selected" : "";
+  };
+
+  const changeFontFamily = (event) => {
+    fontFamily = event.currentTarget.value;
+    window.localStorage.setItem(FONT_FAMILY_KEY, fontFamily);
+    $("p,a,span:not(.material-symbols-outlined)").css("font-family", `${fontFamily}`);
+  }
+
   // Scroll Event
   document.addEventListener("scroll", () => {
     if (!isTopOfPage() && !doesFloatingUpButtonExist()) {
       $("body").append(createFloatingUpButton());
       $("body").append(createFontSizeAdjuster());
+      $("body").append(createFontPicker());
     } else if (isTopOfPage() && doesFloatingUpButtonExist()) {
       $("button#floating-up-button").remove();
       $("div#container-font-size").remove();
+      $("select.font-family").remove();
     }
   });
 });
