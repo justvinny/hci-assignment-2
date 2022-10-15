@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // States
-  let isDarkMode =
-    window.localStorage.getItem(IS_DARK_MODE_KEY) ?? DEFAULT_IS_DARK_MODE;
-
   // Functions
   const displayTheme = () => {
     if (isDarkMode === "yes") {

@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // States
-  let isDarkMode =
-    window.localStorage.getItem(IS_DARK_MODE_KEY) ?? DEFAULT_IS_DARK_MODE;
-  let fontSize = window.localStorage.getItem(FONT_SIZE_KEY);
-  fontSize = fontSize == null ? DEFAULT_FONT_SIZE : fontSize;
-
   // Functions
   const isTopOfPage = () => {
     return $(document).scrollTop() <= 300;
