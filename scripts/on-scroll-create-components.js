@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $(document).scrollTop() >= $("#introduction").offset().top;
 
   const isAboutUsVisible = () =>
-  ($(document).scrollTop() + $(window).height()) >= $("#about-us").offset().top;
+    $(document).scrollTop() + $(window).height() >= $("#about-us").offset().top;
 
   const doesFloatingUpButtonExist = () => {
     return document.getElementById("floating-up-button") != null;
@@ -38,17 +38,34 @@ document.addEventListener("DOMContentLoaded", () => {
       $("div#container-font-size").css("visibility", "hidden");
       $("select.font-family").css("visibility", "hidden");
       $("button#floating-font-options-toggle > span").text("visibility_off");
+      fontOptionsVisibility = "hidden";
     } else {
       $("div#container-font-size").css("visibility", "visible");
       $("select.font-family").css("visibility", "visible");
       $("button#floating-font-options-toggle > span").text("visibility");
+      fontOptionsVisibility = "visible";
     }
-  }
+    window.localStorage.setItem(
+      FONT_OPTIONS_VISIBILITY_KEY,
+      fontOptionsVisibility
+    );
+  };
 
   const isFontOptionsVisible = () => {
-    return $("div#container-font-size").css("visibility") === "visible" && $("select.font-family").css("visibility") === "visible";
-  }
-  
+    return (
+      $("div#container-font-size").css("visibility") === "visible" &&
+      $("select.font-family").css("visibility") === "visible"
+    );
+  };
+
+  const initFontOptionsVisiblity = () => {
+    $("div#container-font-size").css("visibility", fontOptionsVisibility);
+    $("select.font-family").css("visibility", fontOptionsVisibility);
+    const visibilityIcon =
+      fontOptionsVisibility === "visible" ? "visibility" : "visibility_off";
+    $("button#floating-font-options-toggle > span").text(visibilityIcon);
+  };
+
   const createFontSizeAdjuster = () => {
     const inputFontSize = $(
       `<input id="input-font-size" disabled value="${fontSize}">`
@@ -116,12 +133,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll Event
   document.addEventListener("scroll", () => {
-    if (isIntroductionVisible() && !isAboutUsVisible() && !doesFloatingUpButtonExist()) {
+    if (
+      isIntroductionVisible() &&
+      !isAboutUsVisible() &&
+      !doesFloatingUpButtonExist()
+    ) {
       $("body").append(createFloatingUpButton());
       $("body").append(createFontOptionsToggler());
       $("body").append(createFontSizeAdjuster());
       $("body").append(createFontPicker());
-    } else if ((!isIntroductionVisible() || isAboutUsVisible()) && doesFloatingUpButtonExist()) {
+      initFontOptionsVisiblity()
+    } else if (
+      (!isIntroductionVisible() || isAboutUsVisible()) &&
+      doesFloatingUpButtonExist()
+    ) {
       $("button#floating-up-button").remove();
       $("button#floating-font-options-toggle").remove();
       $("div#container-font-size").remove();

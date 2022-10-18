@@ -98,8 +98,12 @@ select {
   color: white;
 }
 
-#floating-up-button:hover {
+#floating-up-button:hover,
+#floating-font-options-toggle:hover,
+.btn-font-size:hover,
+select.font-family:hover {
   cursor: pointer;
+  filter: brightness(0.8);
 }
 
 /* Show or Hide font options floating buton */
