@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isDarkMode === "yes") {
       $("#theme-switch").removeClass("btn-dark").addClass("btn-warning");
       $("#theme-switch-text").text("Light Mode");
-      $("span#theme-switch-icon").text("light_mode");
+      $("#theme-switch-icon")
+        .attr("src", "./assets/light_mode_black_24dp.svg")
+        .attr("alt", "Light Mode - Sun Icon");
       $("body").removeClass("theme-light").addClass("theme-dark");
       $("nav, section#top-container")
         .removeClass("space-blue-bg")
@@ -40,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       $("#theme-switch").removeClass("btn-warning").addClass("btn-dark");
       $("#theme-switch-text").text("Dark Mode");
-      $("span#theme-switch-icon").text("dark_mode");
+      $("#theme-switch-icon")
+        .attr("src", "./assets/dark_mode_white_24dp.svg")
+        .attr("alt", "Dark Mode - Crescent Moon Icon");
       $("body").removeClass("theme-dark").addClass("theme-light");
       $("nav, section#top-container")
         .removeClass("space-blue-bg-dark")

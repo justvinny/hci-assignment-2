@@ -13,13 +13,8 @@ body {
 }
 
 p {
-  text-justify: inter-word;
   max-width: 1024px;
   font-size: 16px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 .anchor {
@@ -31,6 +26,10 @@ p {
 
 .bg-white {
   background-color: white;
+}
+
+.bg-black {
+  background-color: black;
 }
 
 .header-image-size {
@@ -73,6 +72,10 @@ select {
 #theme-switch {
   min-width: 130px;
   padding-left: 8px;
+}
+
+#theme-switch-icon {
+  margin-right: 8px;
 }
 
 .theme-light {
