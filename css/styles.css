@@ -238,7 +238,7 @@ select.font-family {
 
 @font-face {
   font-family: open-dyslexic-mono;
-  src: url("./fonts/OpenDyslexicMono-Regular.otf");
+  src: url("../fonts/OpenDyslexicMono-Regular.otf");
 }
 
 @media only screen and (max-width: 900px) {
