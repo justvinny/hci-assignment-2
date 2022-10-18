@@ -1,5 +1,5 @@
 // Mock Data
-const MOCK_DATA = `<p data-aos="fade-right">
+const MOCK_DATA = `<p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in
 posuere magna. Curabitur aliquet tincidunt metus in elementum.
 Vestibulum eget pretium nisi. Vivamus iaculis magna id erat dapibus
