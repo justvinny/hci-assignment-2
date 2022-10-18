@@ -1,5 +1,5 @@
 // Mock Data
-const MOCK_DATA = `<p>
+const MOCK_DATA = `<p data-aos="fade-right">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in
 posuere magna. Curabitur aliquet tincidunt metus in elementum.
 Vestibulum eget pretium nisi. Vivamus iaculis magna id erat dapibus
@@ -123,4 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set Font Family
   $("p,a,span:not(.material-symbols-outlined)").css("font-family", fontFamily);
+
+  // Refresh AOS to take into account new element positions due to dynamically added text.
+  setTimeout(() => {
+    AOS.refresh();
+  }, 500);
 });

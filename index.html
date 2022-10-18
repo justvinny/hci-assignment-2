@@ -28,6 +28,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto|Montserrat"
     />
+
+    <!-- Animate on Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -83,10 +86,10 @@
 
     <!-- Top Container -->
     <section class="space-blue-bg" id="top-container">
-      <span class="mr-5 mb-5 ml-5 text-center"
+      <span class="mr-5 mb-5 ml-5 text-center" data-aos="fade-right"
         >Usability Study on the Canvas Mobile Application</span
       >
-      <img src="assets/canvas-logo.webp" height="250px" />
+      <img src="assets/canvas-logo.webp" height="250px" data-aos="fade-left" />
     </section>
 
     <!-- Introduction -->
@@ -95,33 +98,42 @@
       class="p-3 d-flex flex-column align-items-center"
       id="introduction"
     >
-      <span class="header-font mb-3 font-space-blue">Introduction</span>
+      <span class="header-font mb-3 font-space-blue" data-aos="fade-right"
+        >Introduction</span
+      >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_hello.svg"
         id="introduction-image"
+        data-aos="fade-left"
       />
     </section>
 
     <!-- Method -->
     <span class="anchor" id="method-anchor"></span>
     <section class="p-3 d-flex flex-column align-items-center" id="method">
-      <span class="header-font mb-3 font-space-blue">Method</span>
+      <span class="header-font mb-3 font-space-blue" data-aos="fade-right"
+        >Method</span
+      >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_processing.svg"
         id="method-image"
+        data-aos="fade-left"
       />
     </section>
 
     <!-- Findings -->
     <span class="anchor" id="findings-anchor"></span>
     <section class="p-3 d-flex flex-column align-items-center" id="findings">
-      <span class="header-font mb-3 font-space-blue">Findings</span>
+      <span class="header-font mb-3 font-space-blue" data-aos="fade-right"
+        >Findings</span
+      >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_customer_survey.svg"
         id="findings-image"
+        data-aos="fade-left"
       />
     </section>
 
@@ -131,22 +143,28 @@
       class="p-3 d-flex flex-column align-items-center"
       id="qualitative-analysis"
     >
-      <span class="header-font mb-3 font-space-blue">Qualitative Analysis</span>
+      <span class="header-font mb-3 font-space-blue" data-aos="fade-right"
+        >Qualitative Analysis</span
+      >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_segment_analysis.svg"
         id="qualitative-analysis-image"
+        data-aos="fade-left"
       />
     </section>
 
     <!-- Conclusion -->
     <span class="anchor" id="conclusion-anchor"></span>
     <section class="p-3 d-flex flex-column align-items-center" id="conclusion">
-      <span class="header-font mb-3 font-space-blue">Conclusion</span>
+      <span class="header-font mb-3 font-space-blue" data-aos="fade-right"
+        >Conclusion</span
+      >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_mic_drop.svg"
         id="conclusion-image"
+        data-aos="fade-left"
       />
     </section>
 
@@ -156,10 +174,12 @@
       class="d-flex justify-content-center"
     >
       <div id="about-us">
-        <span class="header-font" id="about-us-header">About Us</span>
+        <span class="header-font" id="about-us-header" data-aos="fade-right"
+          >About Us</span
+        >
         <div class="d-flex flex-column" id="about-us-content-container">
           <div class="about-us-people-row-container">
-            <div class="about-us-person-container">
+            <div class="about-us-person-container" data-aos="fade-right">
               <img
                 class="person-avatar person-female"
                 src="assets/undraw_female_avatar.svg"
@@ -172,7 +192,7 @@
                 <span>Computer Science / Applied Mathematics</span>
               </div>
             </div>
-            <div class="about-us-person-container">
+            <div class="about-us-person-container" data-aos="fade-left">
               <img
                 class="person-avatar person-female"
                 src="assets/undraw_female_avatar.svg"
@@ -187,7 +207,7 @@
             </div>
           </div>
           <div class="about-us-people-row-container">
-            <div class="about-us-person-container">
+            <div class="about-us-person-container" data-aos="fade-right">
               <img
                 class="person-avatar person-male"
                 src="assets/undraw_male_avatar.svg"
@@ -200,7 +220,7 @@
                 <span>Software Development</span>
               </div>
             </div>
-            <div class="about-us-person-container">
+            <div class="about-us-person-container" data-aos="fade-left">
               <img
                 class="person-avatar person-male"
                 src="assets/undraw_male_avatar.svg"
@@ -217,6 +237,12 @@
         </div>
       </div>
     </section>
+
+    <!-- Required for Animate on Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- Required Scripts for Bootstrap -->
     <script
