@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const createFloatingUpButton = () => {
     const upButton = $(
-      `<button type="button" class="${getBackgroundColor()}" id="floating-up-button"  aria-label="Scroll to top of page button.">
+      `<button type="button" class="${getBackgroundColor()} zoom-out" id="floating-up-button"  aria-label="Scroll to top of page button.">
         <img src="./assets/arrow_upward_white_24dp.svg" alt="Up">
       </button>`
     );
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const createFontOptionsToggler = () => {
     const upButton = $(
-      `<button type="button" class="${getBackgroundColor()}" id="floating-font-options-toggle" aria-label="Font size resizer and font family picker components visiblity toggler button.">
+      `<button type="button" class="${getBackgroundColor()} zoom-out" id="floating-font-options-toggle" aria-label="Font size resizer and font family picker components visiblity toggler button.">
         <img src="./assets/visibility_off_white_24dp.svg" alt="Show">
       </button>`
     );
@@ -38,43 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const toggleFontOptionsVisibility = () => {
-    if (isFontOptionsVisible()) {
-      $("div#container-font-size").css("visibility", "hidden");
-      $("select.font-family").css("visibility", "hidden");
-      $("button#floating-font-options-toggle > img").attr(
-        "src",
-        "./assets/visibility_white_24dp.svg"
-      );
-      fontOptionsVisibility = "hidden";
-    } else {
-      $("div#container-font-size").css("visibility", "visible");
-      $("select.font-family").css("visibility", "visible");
-      $("button#floating-font-options-toggle > img").attr(
-        "src",
-        "./assets/visibility_off_white_24dp.svg"
-      );
-      fontOptionsVisibility = "visible";
-    }
+    fontOptionsVisibility = !fontOptionsVisibility;
+    showOrHideFontOptions();
     window.localStorage.setItem(
       FONT_OPTIONS_VISIBILITY_KEY,
       fontOptionsVisibility
     );
   };
 
-  const isFontOptionsVisible = () => {
-    return (
-      $("div#container-font-size").css("visibility") === "visible" &&
-      $("select.font-family").css("visibility") === "visible"
+  const showOrHideFontOptions = (hasAnimationDelay = true) => {
+    const classToBeRemoved = fontOptionsVisibility ? "zoom-in" : "zoom-out";
+    const classToBeAdded = fontOptionsVisibility ? "zoom-out" : "zoom-in";
+    [$("div#container-font-size"), $("select.font-family")].forEach(
+      (component) => {
+        if (hasAnimationDelay && fontOptionsVisibility) {
+          component.removeClass("no-animation-delay");
+        } else if (!hasAnimationDelay && !fontOptionsVisibility) {
+          component.addClass("no-animation-delay");
+        }
+        component.removeClass(classToBeRemoved).addClass(classToBeAdded);
+      }
     );
-  };
 
-  const initFontOptionsVisiblity = () => {
-    $("div#container-font-size").css("visibility", fontOptionsVisibility);
-    $("select.font-family").css("visibility", fontOptionsVisibility);
-    const visibilityIcon =
-      fontOptionsVisibility === "visible"
-        ? "./assets/visibility_off_white_24dp.svg"
-        : "./assets/visibility_white_24dp.svg";
+    const visibilityIcon = fontOptionsVisibility
+      ? "./assets/visibility_off_white_24dp.svg"
+      : "./assets/visibility_white_24dp.svg";
     $("button#floating-font-options-toggle > img").attr("src", visibilityIcon);
   };
 
@@ -91,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     buttonMinus.click(decrementFontSize);
     const buttonGroupFontSize = $(
-      `<div class="d-flex flex-column" id="container-font-size"></div>`
+      `<div class="d-flex flex-column zoom-out" id="container-font-size"></div>`
     );
     buttonGroupFontSize
       .append(buttonPlus)
@@ -119,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const createFontPicker = () => {
     const fontPicker =
-      $(`<select class="font-family" title="Font Family Picker">
+      $(`<select class="font-family zoom-out" title="Font Family Picker">
     ${FONT_FAMILY_LIST.map(
       (fontFamilyElement) =>
         `<option value='${fontFamilyElement.value}'${addOptionSelectedIfMatch(
@@ -152,15 +140,22 @@ document.addEventListener("DOMContentLoaded", () => {
       $("body").append(createFontOptionsToggler());
       $("body").append(createFontSizeAdjuster());
       $("body").append(createFontPicker());
-      initFontOptionsVisiblity();
+      showOrHideFontOptions((hasAnimationDelay = false));
     } else if (
       (!isIntroductionVisible() || isAboutUsVisible()) &&
       doesFloatingUpButtonExist()
     ) {
-      $("button#floating-up-button").remove();
-      $("button#floating-font-options-toggle").remove();
-      $("div#container-font-size").remove();
-      $("select.font-family").remove();
+      [
+        $("button#floating-up-button"),
+        $("button#floating-font-options-toggle"),
+        $("div#container-font-size"),
+        $("select.font-family"),
+      ].forEach((component) => {
+        component.removeClass("zoom-out").addClass("zoom-in");
+        component.on("animationend", () => {
+          component.remove();
+        });
+      });
     }
   });
 });
