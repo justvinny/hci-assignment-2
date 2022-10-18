@@ -163,6 +163,47 @@ select.font-family {
   right: 124px;
 }
 
+/*  Animations */
+.zoom-out {
+  animation-duration: 300ms;
+  animation-name: zoomout;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomout {
+  from {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.zoom-in {
+  animation-duration: 300ms;
+  animation-name: zoomin;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+  from {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+
+.no-animation-delay {
+  animation-duration: 0ms !important;
+}
+
 /* Top Container */
 #top-container {
   min-height: 600px;

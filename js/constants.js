@@ -8,7 +8,7 @@ const MIN_FONT_SIZE = 12;
 const FONT_FAMILY_KEY = "fontFamily";
 const DEFAULT_FONT_FAMILY = '"Montserrat"';
 const FONT_OPTIONS_VISIBILITY_KEY = "fontOptionsVisibility";
-const DEFAULT_FONT_OPTIONS_VISIBILITY = "visible";
+const DEFAULT_FONT_OPTIONS_VISIBILITY = true;
 const SECTIONS_LIST = [
   "introduction",
   "method",
