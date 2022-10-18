@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("p").css("font-size", `${fontSize}px`);
 
   // Set Font Family
-  $("p,a,span:not(.material-symbols-outlined)").css("font-family", fontFamily);
+  $("p,a,span").css("font-family", fontFamily);
 
   // Refresh AOS to take into account new element positions due to dynamically added text.
   setTimeout(() => {

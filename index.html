@@ -17,12 +17,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-
     <!-- Font -->
     <link
       rel="stylesheet"
@@ -74,12 +68,13 @@
           </li>
         </ul>
         <button
+          type="button" 
           class="btn btn-dark my-2 my-sm-0 d-flex flex-row justify-content-center align-items-center"
           id="theme-switch"
+          aria-label="Light mode / Dark mode theme toggler button."
         >
-          <span class="material-symbols-outlined mr-1" id="theme-switch-icon"
-            >dark_mode</span
-          ><span id="theme-switch-text">Dark Mode</span>
+          <img src="./assets/dark_mode_white_24dp.svg" id="theme-switch-icon" alt="Dark Mode - Crescent Moon Icon">
+          <span id="theme-switch-text">Dark Mode</span>
         </button>
       </div>
     </nav>
@@ -94,6 +89,7 @@
           src="assets/canvas-logo.webp"
           height="250px"
           data-aos="zoom-in"
+          alt="Orange Canvas Application Logo"
         />
       </div>
     </section>
@@ -112,6 +108,7 @@
         src="assets/undraw_hello.svg"
         id="introduction-image"
         data-aos="zoom-in"
+        alt=""
       />
     </section>
 
@@ -126,6 +123,7 @@
         src="assets/undraw_processing.svg"
         id="method-image"
         data-aos="zoom-in"
+        alt=""
       />
     </section>
 
@@ -140,6 +138,7 @@
         src="assets/undraw_customer_survey.svg"
         id="findings-image"
         data-aos="zoom-in"
+        alt=""
       />
     </section>
 
@@ -157,6 +156,7 @@
         src="assets/undraw_segment_analysis.svg"
         id="qualitative-analysis-image"
         data-aos="zoom-in"
+        alt=""
       />
     </section>
 
@@ -171,13 +171,13 @@
         src="assets/undraw_mic_drop.svg"
         id="conclusion-image"
         data-aos="zoom-in"
+        alt=""
       />
     </section>
 
     <!-- About Us -->
     <section
-      style="background-color: black"
-      class="d-flex justify-content-center"
+      class="d-flex justify-content-center bg-black"
     >
       <div id="about-us">
         <span class="header-font" id="about-us-header" data-aos="zoom-in"
@@ -190,6 +190,7 @@
                 class="person-avatar person-female"
                 src="assets/undraw_female_avatar.svg"
                 height="100px"
+                alt="Photo of Abby"
               />
 
               <div class="d-flex flex-column ml-3">
@@ -203,6 +204,7 @@
                 class="person-avatar person-female"
                 src="assets/undraw_female_avatar.svg"
                 height="100px"
+                alt="Photo of Kat"
               />
 
               <div class="d-flex flex-column ml-3">
@@ -218,6 +220,7 @@
                 class="person-avatar person-male"
                 src="assets/undraw_male_avatar.svg"
                 height="100px"
+                alt="Photo of Sungwoo"
               />
 
               <div class="d-flex flex-column ml-3">
@@ -231,6 +234,7 @@
                 class="person-avatar person-male"
                 src="assets/undraw_male_avatar.svg"
                 height="100px"
+                alt="Photo of Vinson"
               />
 
               <div class="d-flex flex-column ml-3">
@@ -268,13 +272,13 @@
     ></script>
 
     <!-- Local Scripts -->
-    <script src="./scripts/constants.js" type="text/javascript"></script>
-    <script src="./scripts/states.js" type="text/javascript"></script>
-    <script src="./scripts/report-data.js" type="text/javascript"></script>
+    <script src="./js/constants.js" type="text/javascript"></script>
+    <script src="./js/states.js" type="text/javascript"></script>
+    <script src="./js/report-data.js" type="text/javascript"></script>
     <script
-      src="./scripts/on-scroll-create-components.js"
+      src="./js/on-scroll-create-components.js"
       type="text/javascript"
     ></script>
-    <script src="./scripts/theme-toggle.js" type="text/javascript"></script>
+    <script src="./js/theme-toggle.js" type="text/javascript"></script>
   </body>
 </html>
