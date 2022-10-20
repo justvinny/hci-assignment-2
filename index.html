@@ -29,7 +29,7 @@
   <body>
     <!-- Navigation Bar -->
     <nav
-      class="navbar sticky-top navbar-expand-lg navbar-dark space-blue-bg pt-3 pb-3"
+      class="navbar sticky-top navbar-expand-custom navbar-dark space-blue-bg pt-3 pb-3"
     >
       <a class="navbar-brand brand-size" href="#">Bisque Group</a>
       <button
@@ -46,34 +46,71 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#introduction-anchor">Introduction</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#method-anchor">Method</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#findings-anchor">Findings</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#qualitative-analysis-anchor"
-              >Qualitative Analysis</a
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#usability-research-anchor"
+              >Usability Research</a
             >
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#conclusion-anchor">Conclusion</a>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#method-anchor">Method</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#analysis-and-conclusions-anchor"
+              >Analysis and Conclusions</a
+            >
+          </li>
+          <li class="nav-item dropdown mr-2">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Individual Reflections
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#individual-reflections-anchor"
+                  >Abby Laloli</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#reflection-kat-anchor"
+                  >Kat Millicevic</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#reflection-sungwoo-anchor"
+                  >Sungwoo Cho</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#reflection-vinson-anchor"
+                  >Vinson Beduya</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mr-2">
+            <a class="nav-link" href="#references-anchor">References</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#about-us">About Us</a>
           </li>
         </ul>
         <button
-          type="button" 
+          type="button"
           class="btn btn-dark my-2 my-sm-0 d-flex flex-row justify-content-center align-items-center"
           id="theme-switch"
           aria-label="Light mode / Dark mode theme toggler button."
         >
-          <img src="./assets/dark_mode_white_24dp.svg" id="theme-switch-icon" alt="Dark Mode - Crescent Moon Icon">
+          <img
+            src="./assets/dark_mode_white_24dp.svg"
+            id="theme-switch-icon"
+            alt="Dark Mode - Crescent Moon Icon"
+          />
           <span id="theme-switch-text">Dark Mode</span>
         </button>
       </div>
@@ -94,19 +131,19 @@
       </div>
     </section>
 
-    <!-- Introduction -->
-    <span class="anchor" id="introduction-anchor"></span>
+    <!-- Usability Research -->
+    <span class="anchor" id="usability-research-anchor"></span>
     <section
       class="p-3 d-flex flex-column align-items-center"
-      id="introduction"
+      id="usability-research"
     >
       <span class="header-font mb-3 font-space-blue" data-aos="zoom-in"
-        >Introduction</span
+        >Usability Research</span
       >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_hello.svg"
-        id="introduction-image"
+        id="usability-research-image"
         data-aos="zoom-in"
         alt=""
       />
@@ -127,58 +164,59 @@
       />
     </section>
 
-    <!-- Findings -->
-    <span class="anchor" id="findings-anchor"></span>
-    <section class="p-3 d-flex flex-column align-items-center" id="findings">
-      <span class="header-font mb-3 font-space-blue" data-aos="zoom-in"
-        >Findings</span
-      >
-      <img
-        class="mb-3 p-3 bg-white header-image-size"
-        src="assets/undraw_customer_survey.svg"
-        id="findings-image"
-        data-aos="zoom-in"
-        alt=""
-      />
-    </section>
-
-    <!-- Qualitative Analysis -->
-    <span class="anchor" id="qualitative-analysis-anchor"></span>
+    <!-- Analysis and Conclusions -->
+    <span class="anchor" id="analysis-and-conclusions-anchor"></span>
     <section
       class="p-3 d-flex flex-column align-items-center"
-      id="qualitative-analysis"
+      id="analysis-and-conclusions"
     >
       <span class="header-font mb-3 font-space-blue" data-aos="zoom-in"
-        >Qualitative Analysis</span
+        >Analysis and Conclusions</span
       >
       <img
         class="mb-3 p-3 bg-white header-image-size"
         src="assets/undraw_segment_analysis.svg"
-        id="qualitative-analysis-image"
+        id="analysis-and-conclusions-image"
         data-aos="zoom-in"
         alt=""
       />
     </section>
 
-    <!-- Conclusion -->
-    <span class="anchor" id="conclusion-anchor"></span>
-    <section class="p-3 d-flex flex-column align-items-center" id="conclusion">
+    <!-- Individual Reflections -->
+    <span class="anchor" id="individual-reflections-anchor"></span>
+    <section
+      class="p-3 d-flex flex-column align-items-center"
+      id="individual-reflections"
+    >
       <span class="header-font mb-3 font-space-blue" data-aos="zoom-in"
-        >Conclusion</span
+        >Individual Reflections</span
       >
       <img
         class="mb-3 p-3 bg-white header-image-size"
-        src="assets/undraw_mic_drop.svg"
-        id="conclusion-image"
+        src="assets/undraw_contemplating.svg"
+        id="individual-reflections-image"
+        data-aos="zoom-in"
+        alt=""
+      />
+    </section>
+
+    <!-- References -->
+    <span class="anchor" id="references-anchor"></span>
+    <section class="p-3 d-flex flex-column align-items-center" id="references">
+      <span class="header-font mb-3 font-space-blue" data-aos="zoom-in"
+        >References</span
+      >
+      <img
+        class="mb-3 p-3 bg-white header-image-size"
+        src="assets/undraw_bibliophile.svg"
+        id="references-image"
         data-aos="zoom-in"
         alt=""
       />
     </section>
 
     <!-- About Us -->
-    <section
-      class="d-flex justify-content-center bg-black"
-    >
+    <section class="d-flex justify-content-center bg-black">
       <div id="about-us">
         <span class="header-font" id="about-us-header" data-aos="zoom-in"
           >About Us</span
@@ -261,13 +299,8 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
 

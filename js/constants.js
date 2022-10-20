@@ -9,13 +9,6 @@ const FONT_FAMILY_KEY = "fontFamily";
 const DEFAULT_FONT_FAMILY = '"Montserrat"';
 const FONT_OPTIONS_VISIBILITY_KEY = "fontOptionsVisibility";
 const DEFAULT_FONT_OPTIONS_VISIBILITY = true;
-const SECTIONS_LIST = [
-  "introduction",
-  "method",
-  "findings",
-  "qualitative-analysis",
-  "conclusion",
-];
 const FONT_FAMILY_LIST = [
   { value: "Arial", text: "Arial" },
   { value: '"Courier New"', text: "Courier New" },

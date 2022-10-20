@@ -1,125 +1,173 @@
 // Mock Data
-const MOCK_DATA = `<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in
-posuere magna. Curabitur aliquet tincidunt metus in elementum.
-Vestibulum eget pretium nisi. Vivamus iaculis magna id erat dapibus
-mattis. Nam commodo nisi ultricies augue viverra, vitae tristique libero
-sodales. Aenean posuere dui quis sem viverra tincidunt. Curabitur
-euismod sit amet mauris et egestas. Integer consectetur risus sit amet
-ipsum lacinia, sit amet egestas felis tempus. Aliquam mollis fringilla
-diam sit amet posuere. Etiam iaculis ante a tempor sollicitudin. Morbi
-ultrices et ipsum vitae fermentum. Nunc cursus fringilla libero quis
-finibus. Quisque accumsan odio est, sed mollis velit suscipit ac. Nam
-consequat lacus sit amet augue ullamcorper auctor.
+const SECTIONS = [
+  {
+    id: "usability-research",
+    content: `<p>
+    From the perspective of the software developer, usability is primarily concerned with the quality of the user’s experience while using a piece of software. It is a way to evaluate whether a product meets measurable usability metrics and if the user can perform desired tasks quickly and efficiently. (Hughes, 1999) Highly usable products, therefore, will lead to a “lack of frustration” for the individuals using them. (Rubin & Chisnell, 2008) Indeed, even before the advent of cutting-edge information technology tools, products with poor usability have led to potentially disastrous consequences. For instance, a usability issue was attributed as the reason for a miscount of votes in the 2000 United States presidential election within Palm Beach County, Florida, where officials fatally chose to use a ballot with rows that appeared misaligned to many voters. This seemingly insignificant error caused a surplus of 2,000 votes to be erroneously counted for the Reform Party ticket instead of their Democratic counterparts. (Hertzum, 2020; Wand et al., 2001) This error proved ruinous for the Democratic ticket, as candidate Al Gore famously lost the 2000 presidential race in Florida to George Bush by a margin of less than 600 votes.
+    <br><br>It is critical, therefore, to thoroughly test the usability of all products before their release into the general market. The basis of a usability test has existed for several decades, with its early proponents referring to it as a guided verbalization technique, or “thinking-aloud” method, wherein a moderator encourages a participant to actively vocalise their thoughts on a subject. Ericsson and Simon were two of the first scholars to theorise on the importance and validity of this technique, primarily in their 1984 book <em>Protocol Analysis: Verbal Reports as Data</em>. Within this work, it was posited that certain verbalizations of a test subject, such as objective descriptions or reports of an activity, image, or abstract concept, can be treated as valid data. (Ericsson & Simon, 1993) Though the findings of Ericsson and Simon, who were a political scientist and psychologist respectively, were specific to the field of cognitive psychology, they laid the foundation for an interdisciplinary body of work from a variety of other researchers.  One of the most significant impacts of Ericsson and Simon’s book has been on the field of usability testing, which emerged shortly thereafter on a wider academic and procedural scale. During a modern usability test, participants will be encouraged to continuously vocalise their thoughts, a practice which was pioneered in <em>Protocol Analysis</em>.
+    <br><br>However, modern practices of usability testing diverge significantly from the findings of <em>Protocol Analysis</em>, as Ericsson and Simon did not believe expressions of subjective opinion were of much use to psychological practitioners. In addition, they favoured a hands-off approach when it came to guiding participants’ thought processes, with only occasionally reminding them to keep talking. (Boren & Ramey, 2000) Today’s usability testing is more flexible, but the concept of moderator intervention remains highly debated within academic circles. Whiteside and colleagues (1988) argued that if a moderator simply observes a participant’s behaviour and takes notes of objective fact, they are likely to form their own conclusions about the user’s feelings on the subject of the usability test. This would effectively detract from the competence of the study, as the degree of user satisfaction might not be sufficiently recorded. (Tamler, 1998) Whiteside et al. also concluded that the act of merely observing a participant reduces their role in the study to a scrutinised object, which may also affect their attitude and subsequent performance.
+    <br><br>Generally, most usability researchers will agree that the context and purpose of a usability test will determine the behaviour of both the participant and the moderator, which can vary greatly. The goal of usability testing is most often to collect qualitative data, which is effectively gathered when the participant is actively guided through using the product. Therefore, there are certain types of moderator interference which are critical to the success of the study, such as asking questions which are designed to elicit a verbalised response, listening actively, and guiding the user. The activities of the study often unfold in such a way that participants may naturally be inclined to make suggestions on how to improve the usability of the product.   
+    <br><br>A usability test does not exist in a vacuum. The conduction of a usability test is always preceded by research and methodological preparation. There is always the underlying assumption that the moderator has some fundamental knowledge of the product being tested. (Rubin & Chisnell, 2008) A usability test is also followed by rigorous analysis of its events, and, if applicable, the implementation of its findings to create an updated, superior product.  This can be viewed as an element of the Wheel model, as detailed by Hartson and Pyla (2018) in their book about UX design. The Wheel model is a blueprint for the design process, which describes the cyclical nature of software development, wherein a new product is designed, then implemented, then evaluated and analysed. The Wheel model is, of course, formed in a circular shape, implying that the last step feeds directly into the first one, keeping the design process in a perpetual cycle of development and redevelopment.
+    <br><br>When it comes to the number of participants in a usability study, less is more. This is proven by the work of Neilsen and Landauer (1993), who designed a logarithmic curve which endeavoured to find the optimal number of participants in a usability study.
+    </p><br><img src="assets/optimal-participants-graph.png" class="align-self-center header-image-size" data-aos="zoom-in" alt="Neilsen and Landauer (1993) logarithmic curve graph for optimal number of participants in a usability study."/>
+    <br><br><p>The base of the curve reveals one fundamental truth: zero participants will always give zero usability insights. A single participant is likely to provide practitioners with roughly 1/3 of their total knowledge. By the time five or six participants have been interviewed, moderators will have gained an understanding of up to 90% of total usability problems. Increasing the number of participants any further runs the risk of redundancy, and conductors of a usability test might find themselves hearing the same comments repeatedly by several participants. (Nielsen, 2000; Nielsen & Landauer, 1993) This is especially pertinent in cases where tasks are specifically designed for participants to expose potential usability issues, where the problem is already predefined. Within our usability study of the Canvas mobile application, we chose to have six participants, which proved to be the perfect number for our purposes. We did find some repetition within participants’ comments towards the end of our study; however, each new participant still supplied us with some sort of differing perspective.
+    <br><br>According to Barnum (2010), in the book <em>Usability Testing Essentials</em>, the best way for practitioners to implement a small usability study is to follow general guidelines which include defining the user group, using a think-aloud method, and creating task-based scenarios for participants to complete. Within the usability test our team conducted for this project, it was simple to define the user profile: any AUT student who uses Canvas, whether or not they had experience with the mobile application. Our pool of participants ended up being quite diverse regarding their prior knowledge of the app, with some admitting they have never used it before, and others being active, daily users. We enforced a think-aloud message, asking participants to actively voice their thoughts as they went through each task. 
+  </p>`,
+  },
+  {
+    id: "method",
+    content: `<p>
+    For our study we researched multiple usability testing methods to get the most meaningful feedback from the users. We looked into techniques such as "thinking aloud" and moderated testing. The "thinking aloud" method is a method which encourages the user to speak their mind while using the app. Moderated testing is a form of testing where the observants guide the participants throughout the study. We found these methods best suited our study.
+    <br><br>The "thinking aloud" method is a usability method where the user exercises the product while saying what comes to their minds. In our case the users would be using the canvas mobile app while thinking aloud. The people conducting the test then observe what the user is saying, giving insight into what they think of the app. Before our testing we would actively encourage the participants to say what came to their mind. We found that asking before rather than during the test was most effective as it provided less distractions for the participants. We also found that building a rapport with the participants was necessary as they felt more inclined to answer honestly. 
+    <br><br>We also chose to conduct a moderated usability test rather than an unmoderated test. Moderated testing involves being present with the participants throughout the study to collect feedback along the way.  In our test we would provide a set of tasks that would help with creating an objective for the participant. We found that if there wasn't a set of tasks to do then there wouldn't be enough content to observe as the test was too short to gather any evidence. A moderator also has the ability to make the participant more engaged when doing the tasks, leading to more reliable data.
+    <br><br>After choosing our techniques, we looked into forming the actual steps for the study. We decided to use these steps after looking through other usability tests and studying the basic components that these tests were made up of.  
+    <br><br><strong>Developing the objectives for the test</strong>
+    <br>We decided on four tasks the participants would try and attempt to complete. The tasks were toggling on dark mode, adding an event to the calendar, customising the layout of the course dashboard and accessing the discussion forum. We chose these tasks as they best represented what ordinarily be performed during the use of the product (Rubin et al., 2008 ). 
+    <br><br><strong>Choosing participants for the test</strong>
+    <br>For choosing the participants we decided to select 6 random students. To make sure our results were valid we made sure to pick people that were typical users of the product as not doing so could yield poor or invalid results (Rubin et al., 2008 ). We would make sure to select students who used canvas as their main course management system rather than other programs such as Blackboard. To reduce any chance of bias we also chose students who were alone rather than students who were in a group.
+    <br><br><strong>Representing the actual work environment</strong>
+    <br>To represent the actual environment in which the app would be used in, we would acquire a room that simulated an environment people would use the canvas app in. We decided on field testing rather than a normal lab environment because it provided the actual context of use of the product, context like the actual work environment (Barnum, 2010). We would also let the participants decide whether they wanted to use their own device or a device that we would provide. One aspect that we kept constant was the operating system of the device, we would use IOS on all tests to reduce any inconsistencies that could arise from performance differences between Android and IOS devices. 
+    <br><br><strong>Analysis of data</strong>
+    <br>We would collect information from the participants based on their interaction with the app. After collecting the information we would begin analysis of the data. The data would be analysed both individually and merged together. Individual analysis of the participants serves to turn the participants' behaviour into the actual usability findings while the merging of data can provide information such as frequency (Hertzum, 2020). 
+    <br><br><strong><u class="sub-header-font font-space-blue">The usability testing had multiple stages of engagement with the canvas app.</u></strong>
+    <br>At first we allowed the participants to play around with and explore the app on their own for a couple of minutes so that we could gain a better understanding of how they use the app. We let them do so until they were comfortable enough to start carrying out the tasks.
+    <br><br>We then gave them a set of tasks to perform and look into, these tasks included toggling dark mode on, adding an event to the calendar, changing the layout and colour of the course  dashboard and accessing the discussion forum.
+    <br><br>For our first task, we asked the users to try and toggle on dark mode through the app. The participants were instructed to go and find the settings to try and toggle dark mode for the app. We would remind the participants to speak whatever came to their mind while doing the task. We would then note down anything the participants had to say about the task along with our observations.  
+    <br><br>For our second task, we asked the users to add an event to the calendar. The participants were instructed to navigate to the calendar then add any event to the calendar with any date they chose. The participants would say what they thought of the task while they were doing it. After this we would note down any quotes from the user and the way they carried out the task. 
+    <br><br>For our third task, we asked the users to try to change the layout of their dashboard. The users would go into the canvas course dashboard and were instructed to try and change the name, layout and the colour of the courses. We encouraged the participants to say what came to their mind during the duration of the task. After this we would note down any thoughts from the user and how they performed the task.
+    <br><br>For our fourth task, we asked the participants to try and access the discussion forum. The participants would go from the dashboard and try to navigate to the discussion forum. We made sure to remind them before the task to verbalise what they were thinking of while doing it. We would note any verbalization from the participant and observations on how they performed the task 
+    <br><br><strong><u class="sub-header-font font-space-blue">Steps we took with our participants</u></strong>
+    <br><strong>Gathering the subject</strong>
+    <br>To gather a good range of participants we made sure to select random students around the WG building, we made sure to get participants that were alone to reduce influence that each participant may have had on eachother. We did this so that there was less chance of bias in our observations. 
+    <br><br><strong>Getting acquainted/making them feel comfortable</strong>
+    <br>Once we were able to get the participant, we made sure to make them feel comfortable and built a rapport with them. We did this so they felt comfortable enough to be genuine and honest with their reactions. 
+    <br><br><strong>During the test</strong>
+    <br>During the actual test we made sure to let the participant know that there was no wrong answer or no wrong way to carry out the tasks. We did this so that the participants wouldn't feel like they weren't doing anything wrong and so that they wouldn't be guided to a "right" or "wrong" answer. We would also encourage them to verbalise while doing the tasks.  
+    <br><br><strong>After the test</strong>
+    <br>After the test we made sure to reward the participants for taking part in our study. We wanted to thank and let the participants know that we appreciated them for their time. We ended up rewarding them with some sweets.
+    <br><br><strong><u class="sub-header-font font-space-blue">What we noted down</u></strong>
+    <br>For our notes and observations we decided to categorise it based on the tasks we had chosen. We also decided to add extra categories for the body language of the participants and any notable opinions and suggestions they had for the app.
+    <br><br><strong>Free observation</strong>
+    <br>We noted down things such as body language while using the app, how well they navigated through the app, any notable thing they said such as what they found nice or what they found annoying about the app.
+    <br><br><strong>Toggling dark mode</strong>
+    <br>We would note down how easily they were able to toggle dark mode or how difficult they found it. We would observe and note down their body language while doing so. We also noted down anything they had to say such as whether they found it easy to toggle it on or off.
+    <br><br><strong>Accessing discussion forum</strong>
+    <br>We noted down how easily they were able to access the discussion forum. We would look at things such as how quickly it took them to access it or how long they took. We would note down anything they said while accessing the discussion forum.
+    <br><br><strong>Dashboard customization</strong>
+    <br>We would look at things such as if they were able to find the settings for the dashboard customization. We would note down how easy or difficult it seemed for them to find the setting. We would also note down anything they said about the experience such as whether they found it intuitive or not.
+    <br><br><strong>Adding event to calendar</strong>
+    <br>We would look at if they were able to find the calendar feature for the app, we would also observe if they were able to add an event without any trouble or if they found it difficult to add an event. We would also note down anything they had to say such as whether they found it easy or difficult to add an event.
+    <br><br><strong>Body language</strong>
+    <br>We also made sure to note down the body language of the participants. We would observe them while using the app and see if they were comfortable while doing the tasks. We would look at their hands to see if they knew where to go or if they didn't. We would observe whether there were any long pauses or if they were able to immediately do the task.
+    <br><br><strong>Participants thoughts</strong>
+    <br>We had to make sure to note down whatever the participants said during the duration of the study, the participants would "think aloud" and say things such as whether they found a task easy or not. We would also note down other things such as any suggestions they had towards any of the apps features.  
+  </p>`,
+  },
+  {
+    id: "analysis-and-conclusions",
+    content: `<p>
+    There are two major methods of research and analysis: quantitative research and qualitative research. Gray and Densten (1998) note that quantitative research is often based on numerical data and facts, following closely to the scientific method and the ability to recreate results. For example, Segtnan and Isaksson (2000) gathered measurements when investigating the carbohydrates found in fruit juices. This data was numerical and entirely objective, and so they performed a quantitative analysis. Gray and Densten (1998) describe qualitative research as a more naturalistic process that focuses on real world implications and interpretations of text-based information. For example, Ezzy (2000) gathered data about people living with HIV/AIDS through conversational interviews. Because this data was gathered verbally and later transcribed to text form, Ezzy carried out a qualitative analysis of the data. Our usability study aimed to form insights about how usable the Canvas mobile application is for AUT students, and form suggestions for future development to improve the application. Because our study was designed to form insights from discussions and interpretations of our participants’ actions, a qualitative approach is most appropriate.
+    <br><br>There are many different types of qualitative analysis methods that can be carried out, the main studies being ethnography, critical social theory, content analysis, narrative analysis, and phenomenology (Cirgin Elliot & Beausang, 2002). Ethnography is often claimed to be the first qualitative method, based not in asking why a social group is formed, but instead on giving an accurate description of the group’s life (Peacock, 1986). Critical social theory often targets oppressed social groups and aims to bring attention and understanding to these communities (Crossley, 2005). Content analysis is used to find themes from almost any type of data, whether it be conversational, story based, media, etc., and identify expectations and perceptions (Miles & Huberman, 1994). Narrative analysis, like the name suggests, is used for analysing accounts of events to find meaning in the stories (Ezzy, 2003). Phenomenology can be split into grounded theory and hermeneutics. Grounded theory is the use of participant data to discover themes which can confirm or deny pre-established theory(s) for a phenomenon (Ezzy, 2003). Hermeneutics is used to blend together a researcher’s ideas of a phenomenon with data from particpants and outside relevant data to form an understanding of the phenomenon itself (Wojnar, & Swanson, 2007). Most of these studies require a pre-existing theory to be confirmed through the analysis of data. Our usability test was a purely exploratory study, so we decided to use a slightly different analysis method: thematic analysis.
+    <br><br>Thematic analysis can be described as a mix of the qualitative methods of grounded theory, positivism, interpretivism, and phenomenology (Guest, MacQueen, & Namey, 2012). It aims to discover codes (themes) throughout a dataset to inform real solutions or build models. While it has the limitation of potentially missing more subtle or nuanced observations, it works well for a group of multiple analysts and is rooted in combining the best parts of multiple accurate methods. Thematic analysis works well in exploratory situations when planning begins before the data collection (Guest, MacQueen, & Namey, 2012). This planning can involve strategies on how to ask participants about their experiences or how to prompt them to further explain. The nature of our usability study meant that we already did this planning. It also involves having a general idea of the categories the study may be broken into, but these would be general ideas like ‘how does dark mode affect users?’ rather than very specific issues like ‘users cannot read buttons in dark mode’ (Ezzy, 2003). These categories are later split into specific codes that can be used to draw conclusions.
+    <br><br>The usability study was split into two distinct sections: the exploratory section and the guided tasks. In accordance with the thematic analysis method, we entered into the study with a few general issues in mind which we used to form our guided tasks, but had no specific features pinpointed. This meant that we could code our data and find the common themes among participants during and after the sessions. To sum up the coding, three main themes were identified in the exploratory session (and confirmed in the guided section): participants use the website much more regularly than the application, the application is used mostly for quick actions like checking timetables or assignment due dates, and the layout of the application can be confusing and messy within each paper’s section. We have concluded that the lack of use of the application is due to the lack of consistency in between course layouts as well as the application being too similar to the website. By this, we mean that while the app looks very close to the website’s layout, it is not suited to smartphones as the sections, for example the ‘Course Overview’, ‘Teaching Team’, and ‘Assessments’ when users enter the ‘Home’ section of a paper, are too big on the screen and suited more computers than smartphones. The lack of use is also due to how students are used to studying. A student is much more likely to watch lectures or read through slideshows on a larger screen like a laptop than a small smartphone screen because the content will be bigger. This is what leads to students using the application mostly for quick actions such as checking their timetables. The layout issues are not exclusive to the application because course leaders are given the ability to edit their course pages individually. However, this leads to a lack of consistency for students and can make finding specific content difficult with Canvas.
+    <br><br>The guided tasks were all carried out in dark mode (with the exception of the first task to find dark mode), and hence revealed insights about the nature of dark mode in Canvas. An overwhelming theme within dark mode was that buttons were extremely difficult to find because their colouring was not adjusted for the dark background. This meant that there were dark grey buttons on a dark grey background, and some participants had to fully close the application because they could not exit the section. There were also some issues with where some features could be found. Most participants expected the features to rename and recolour courses to be found in the ‘Edit Dashboard’ section, when it was actually found in the meatball menus of each course. The option to switch between dark mode and light mode was also expected to be in the hamburger menu, with some participants trying first to change the colour overlay option, instead of inside the settings within the hamburger menu.
+    <br><br>This usability test and the analysis we conducted helped us to develop some suggestions for improvements to the Canvas mobile application. First, we suggest that dark mode be further tested and improved by adjusting buttons to be white so they can be seen on the dark background. Next, we suggest that features be moved to more intuitive sections. Any change of the dashboard, whether it be the courses displayed, the course names, the course colours, the course orders, etc. should all come under the ‘Edit Dashboard’ section. Further, we suggest that the ‘Edit Dashboard’ section itself be moved into the hamburger menu. The course specific features (colour and nickname) can also stay in the meatball menus as they relate to each course but having them available in the ‘Edit Dashboard’ section may make it more intuitive to find and use. Within the hamburger menu, we suggest that all settings be moved out of the settings section and instead have the ’Preferences’ and ‘Legal’ sections be within the hamburger. The ‘Show marks’ and ‘Colour overlay’ could then be moved into ‘Preferences’, as ‘Options’ is the same thing. The course layouts should also be edited to be more mobile friendly, particularly the ‘Course Overview’, ‘Teaching Team’, and ‘Assessments’ sections found in every course. These should be smaller, perhaps just bars across the screen rather than large sections that don’t all fit on the screen. We also advise that Canvas offer a more uniform way of setting up courses so that they have a more consistent layout for students.
+  </p>`,
+  },
+  {
+    id: "individual-reflections",
+    content: `
+  <div class="mr-auto">
+    <img
+      class="person-avatar person-female"
+      src="assets/undraw_female_avatar.svg"
+      height="100px"
+      alt="Photo of Abby"
+    />
+    <span><strong class="sub-header-font ml-2">Abby Laloli</strong></span>
+  </div>
+  <p></p>
 
-<br /><br />Etiam sed elit magna. Nam volutpat eros at erat suscipit, et
-bibendum erat varius. Curabitur lectus dolor, eleifend vel cursus in,
-molestie eget velit. Sed et mollis eros. Aliquam erat volutpat. Duis
-sagittis, odio non eleifend mollis, risus ipsum porttitor mauris, sed
-commodo enim nisl vel mi. Integer commodo consectetur mi at gravida.
-Praesent vulputate hendrerit odio, at euismod nulla eleifend non. Donec
-tincidunt, nisl quis pulvinar egestas, dolor quam congue ligula, at
-posuere tortor lacus non velit. Aenean sagittis lacus sem, non hendrerit
-erat consectetur eget. Ut cursus, enim vitae dignissim tempus, est leo
-sodales ex, ut placerat nisl libero in tortor. Curabitur dignissim nisl
-elit, et vestibulum dolor pulvinar non. Etiam mollis tristique libero,
-eu placerat enim eleifend non. Quisque non cursus nulla. Vivamus
-facilisis magna nulla, vitae ultrices purus congue et. Donec quam ante,
-aliquam et rutrum scelerisque, blandit eget turpis.
+  <br><br><span class="anchor" id="reflection-kat-anchor"></span>
+  <div class="mr-auto">
+    <img
+      class="person-avatar person-female"
+      src="assets/undraw_female_avatar.svg"
+      height="100px"
+      alt="Photo of Kat"
+    />
+    <span><strong class="sub-header-font ml-2">Kat Millicevic</strong></span>
+  </div>
+  <p></p>
 
-<br /><br />Cras ex augue, tincidunt eget dictum vel, iaculis in diam.
-Vestibulum sed facilisis metus. Nam gravida risus non finibus ornare.
-Nulla a odio quam. In ornare hendrerit lectus, quis eleifend elit
-finibus quis. Vestibulum orci nunc, bibendum vel justo mattis, lacinia
-vehicula lorem. Nam laoreet commodo cursus. Donec vulputate dolor quis
-scelerisque vestibulum. Nulla auctor, metus pellentesque lobortis
-imperdiet, nulla felis viverra risus, quis ullamcorper risus lectus non
-arcu. In sit amet nulla arcu. Mauris bibendum augue sit amet commodo
-condimentum. Duis lobortis convallis aliquam. Sed feugiat, quam vel
-rutrum tincidunt, leo nisi sollicitudin diam, vitae ornare massa neque
-vitae nibh.
+  <br><br><span class="anchor" id="reflection-sungwoo-anchor"></span>
+  <div class="mr-auto">
+    <img
+      class="person-avatar person-male"
+      src="assets/undraw_male_avatar.svg"
+      height="100px"
+      alt="Photo of Sungwoo"
+    />
+    <span><strong class="sub-header-font ml-2">Sungwoo Cho</strong></span>
+  </div>
+  <p></p>
 
-<br /><br />Vivamus eu mi quis arcu lobortis feugiat nec vitae nibh.
-Nulla facilisi. Etiam eget quam tempor ligula vestibulum convallis.
-Vestibulum congue, ex vel dignissim sodales, sapien augue accumsan odio,
-ut fringilla sem orci sit amet ex. Vestibulum feugiat justo at convallis
-aliquam. Integer rutrum gravida orci et eleifend. Nulla sagittis ligula
-vitae leo laoreet interdum. Mauris pretium massa at enim tincidunt, et
-vestibulum velit fringilla. Aliquam vitae magna sodales, tincidunt nisl
-id, commodo turpis. Etiam ultricies ante vel turpis varius dignissim.
-Pellentesque non mauris eu augue suscipit ultricies. Mauris id elementum
-massa, a tempus massa. Vestibulum nunc nibh, eleifend at orci et,
-pellentesque consectetur turpis.
-
-<br /><br />Quisque egestas non nisi sed convallis. Morbi id neque et
-purus ultrices tempor non sit amet felis. Sed ut enim ligula. Fusce
-tempus, diam vel pharetra egestas, massa dui sodales dolor, non lacinia
-odio tortor at nunc. Suspendisse nec lorem ac quam finibus auctor in nec
-lectus. Etiam vulputate ex a nisl eleifend ornare. Etiam imperdiet sem
-eu posuere finibus.
-
-<br /><br />Curabitur in mi ultrices, venenatis nisi eu, malesuada elit.
-Duis eget ipsum nec tortor luctus commodo non vel nibh. Vestibulum ante
-ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-Ut iaculis neque id venenatis laoreet. Nunc porttitor turpis enim, quis
-scelerisque eros imperdiet eu. Sed sed erat eget quam fringilla sodales.
-Morbi facilisis, justo vel sollicitudin blandit, ipsum urna tincidunt
-justo, non tincidunt nisi mi eget risus. Donec hendrerit pretium metus.
-Nulla facilisi. Phasellus ultrices rutrum nisi eu pulvinar. Cras
-tincidunt enim felis, quis pharetra massa consequat id.
-
-<br /><br />In vulputate pharetra magna sit amet porta. Suspendisse sit
-amet feugiat orci, at molestie turpis. Duis metus tellus, lobortis quis
-augue eget, semper auctor velit. Ut orci tellus, porttitor et libero
-nec, elementum varius massa. Curabitur pretium mollis nisl eu blandit.
-Cras dignissim purus enim, molestie facilisis diam semper non. Nunc
-convallis ante et massa vehicula hendrerit. Quisque tincidunt nisi
-elementum libero commodo sodales. Nulla pellentesque nisl posuere lectus
-eleifend, a condimentum turpis pretium. Vestibulum id scelerisque risus.
-Duis fringilla vestibulum enim, ut hendrerit purus porttitor in.
-Suspendisse vestibulum mauris et ipsum porta interdum. Quisque elementum
-fermentum aliquet. In hac habitasse platea dictumst.
-
-<br /><br />Sed tempus felis id venenatis semper. Morbi efficitur at leo
-facilisis sodales. Vivamus et nisl quis sapien convallis tempus. Fusce
-facilisis, nibh sed tincidunt mollis, metus est placerat lectus, vel
-tempor risus neque et risus. Nam lobortis sem est, quis malesuada mi
-iaculis nec. Vivamus sit amet enim faucibus, porta magna quis, tincidunt
-erat. Curabitur ac pellentesque diam. Nullam rutrum nisl nec nulla
-fermentum blandit. In placerat diam vitae elementum ornare. Curabitur at
-egestas felis. Sed condimentum purus vel rhoncus accumsan. Proin
-malesuada metus ut urna viverra elementum. Nulla diam mi, varius ut
-felis at, tincidunt luctus dolor. Quisque sed sollicitudin mi. Morbi
-mollis hendrerit arcu non rhoncus.
-
-<br /><br />Duis ac aliquam velit, tincidunt tempus purus. Integer id
-velit mi. Proin ac ex efficitur, posuere risus quis, mattis diam.
-Phasellus porta dui sem, at sollicitudin tortor viverra non. Maecenas
-vitae felis eu magna feugiat luctus. Nullam dictum faucibus felis eu
-aliquam. Pellentesque ante dui, accumsan vel molestie id, vestibulum
-eget velit. Pellentesque id metus lectus. Aenean posuere fringilla
-malesuada.
-
-<br /><br />Praesent faucibus risus sit amet tincidunt fermentum. Ut vel
-maximus lacus. Proin sodales dolor ut interdum luctus. Maecenas mollis
-est quis tellus scelerisque, vel finibus diam aliquet. Aliquam erat
-volutpat. Curabitur id fringilla nibh, id efficitur eros. Suspendisse
-quis rhoncus arcu. Vivamus pulvinar diam eget tellus pulvinar fringilla.
-Nulla quis nulla nisl. Aliquam lacus mauris, accumsan sed ornare vel,
-finibus id diam. Morbi ac ligula quam. Morbi rutrum, purus sit amet
-lobortis mollis, ex lorem placerat tortor, ornare malesuada erat ante
-sollicitudin nisl. Donec turpis massa, iaculis vitae quam vel, tempor
-vehicula lorem. Morbi nec neque magna.
-</p>`;
+  <br><br><span class="anchor" id="reflection-vinson-anchor"></span>
+  <div class="mr-auto">
+    <img
+      class="person-avatar person-male"
+      src="assets/undraw_male_avatar.svg"
+      height="100px"
+      alt="Photo of Vinson"
+    />
+    <span><strong class="sub-header-font ml-2">Vinson Beduya</strong></span>
+  </div>
+  <p>
+  <br>This is a reflective essay about the usability study we conducted for the Canvas mobile application. I will first give a brief background about myself and the reason why we chose Canvas as our topic. Then I will discuss the overall process of how we conducted the usability study and my role in it.  After which, I will reflect on my experience with the project and the things I have learned thanks to it. Finally, I will then analyse how this would be helpful to my career as a Software Developer in the real world. 
+  <br><br>Firstly, some background about me—I am a career changer who discovered his passion for programming in his mid-twenties. My programming experience has been very brief at only a meagre three and a half years. There is definitely still a lot for me to learn, but I am quite happy to have been blessed with multiple opportunities the past year or two that helped me break into the industry as early as my 2nd year of University. This was a very exciting phase of my life which proved my hard work was not in vain. I was able to demonstrate my passion for programming through multiple personal projects in my free time which led to an offer for a role as a Software Engineering Intern at Xero last summer. That internship allowed me to learn a lot about real world Software Development and gave me the opportunity to work with a lot of brilliant minds. Not to mention, this experience over the summer further reaffirmed my decision to become a Software Developer and am eagerly looking forward to getting back to work in the industry after this semester ends. 
+  <br><br>Secondly, the reason why we chose to conduct a usability study on the Canvas mobile application was very simple—all members in the team are very interested in having a career in Software Development. This is why it easily made sense to choose a project closely related to that. In the initial phases of the study, each of us did our individual research on how to perform a usability study. In my research particularly, I was focused on studying two sources I found—a course about usability studies by Google as part of their User Experience (UX) design certification program and a usability study from Portland State University on their library’s mobile website. I really liked the course from Google as it provided very thorough examples of both moderated and unmoderated usability studies. I learned the importance of mitigating bias forming with our participants and the important things to look out for when taking notes. I then understood how to properly observe participants based on their emotions, body language, reaction, impactful quotes, and feedback. As for the study from Portland State University, it provided me with a more academic perspective on how it is performed compared to Google’s course ast it focused a lot more on theory and referencing. Both have definitely been helpful in improving my understanding on the topic. Moreover, the things I learned from these are consistent with my experience working with professional UX designers from Xero and how they conducted usability studies with their users. It was definitely interesting to gain more understanding of what a UX designer does as it requires a totally different skill-set compared to Software Development. After which, we convened with the team and combined our individual findings to determine the process for our usability study. 
+  <br><br>Thirdly, during the actual study itself, my main roles were acquiring participants and note taking. I leveraged two channels to find our participants—through our Discord network and cold approaching random students at the University. The first approach was definitely easier, effort-wise, as all it took was a single message online. Unfortunately, we were only able to gather four people using this method due to a lot of schedule conflicts and were still missing two more participants. This is why we decided that Kat and I would be approaching random students at the University. This definitely took a lot more effort as not everyone was exactly keen to participate in a random study especially since we were not allowed to entice people with gifts or incentives. Fortunately for us, we were able to find two more people in the end after talking to dozens of students. As for the gifts, we did have some chocolates and lollies, but we only gave them out at the end and never mentioned them before due to ethical implications that it would be perceived as a “bribe”. As for the note taking, it was Sungwoo and I who took the notes. Whereas, Abby moderated the study and asked follow-up questions; and Kat was tasked in recording the participant’s interaction with the application.
+  <br><br>Fourthly, after the study concluded, I was tasked with designing and developing the digital portfolio as I had the strongest technical knowledge in programming within the team. Since the portfolio is simply a static site which does not need to communicate with a backend, I decided to simply use HTML, CSS, JS, jQuery, and Bootstrap instead of relying on a frontend framework like React. This is because using React would be overkill and would bloat the application with too many unnecessary external dependencies. As for the design, it is inspired from a lot of modern websites and the colours are consistent with Material UI guidelines. The Material UI guidelines ensure that programmers are able to consistently deliver professional looking applications even without a design background. As for the user experience of the application, it was designed with ease of use as the focus and I constantly put myself in the shoes of a user. I made sure that the website was responsive to not only desktop computers and laptops but also to a mobile phone. Moreover, since this site’s purpose involves a lot of reading, I have added two features which enhance that aspect for the users by allowing them to change the font family and the font size. I also took into account dyslexic readers so I have added the option to choose a font which is dyslexia friendly. Another thing I took into consideration was blue light exposure causing eye strain, so I added the option to toggle dark mode for the site. Furthermore, all of these settings are persistently stored in the browser cache so it will remember the user’s preferences for fonts, size, and theme. This way they will not have to keep reconfiguring the site every time they reload the page. I have also added easy navigation through a stickied toolbar which uses scrolling animations to inform the user concisely where they are moving to within the page. As for ensuring it is highly accessible by visually impaired readers, I have added labels for all relevant images and non-text HTML elements.  Finally, to avoid cluttering the browser with all the extra UI features I added, I create a visibility toggle so users can show and hide these at their convenience. This is especially helpful on mobile devices which do not have much screen real estate. 
+  <br><br>Overall, I found this assignment to be quite educational and I love how it gave me extra insights on the work of User Experience (UX) designers and researchers who I will be working closely with throughout my career as a Software Developer. This was definitely one of the more practical assessments for the course and that way of learning resonates with me more as I am a hands-on and visual learner. This learning style is why I got into programming in the first place as I loved being able to build things and learn at the same time using code. I especially love the dopamine high I get from solving problems in a Software Development context. As for my weaknesses, one would definitely be academic research as it does not appeal to me at all and the other would be my lack of experience in a leadership position. For the latter, I am confident that I will improve on that aspect given enough time and the opportunity to learn from successful leaders within the industry. In saying that, for the immediate future, my main focus should be on the Software Development side of things as that field alone already has so much things I need to learn about. The Computer Science field is just too vast and technology evolves at a rapid rate that it is simply impossible to learn everything about it even with a lifetime of learning. This means that I should not be diverting my attention by learning topics unrelated to the field I want to be in as that could potentially hinder my efforts in becoming truly good at my craft. Therefore, it is best for me to take things one step at a time and hyperfocus on the more immediate skills necessary for Software Development until I reach my goal of being able to design and write robust software that scales with minimal issues to an enterprise level.
+  </p>`,
+  },
+  {
+    id: "references",
+    content: `<p>
+      1. Barnum, C. M. (2010). <em>Usability testing essentials : Ready, set... test!.</em> Elsevier Science & Technology.
+      <br><br>2. Boren, T., & Ramey, J. (2000, October). Thinking aloud: Reconciling theory and practice. <em>IEEE Transactions on Professional Communication</em>, 43(3), 261. <a target="_blank" href="https://doi.org/10.1109/47.867942">doi.org/10.1109/47.867942</a>
+      <br><br>3. Ericsson, A. K., & Simon, H. A. (1993, April 13). <em>Protocol Analysis - Rev’d Edition: Verbal Reports as Data</em> (revised edition). Bradford Books.
+      <br><br>4. Hartson, R., & Pyla, P. S. (2018). <em>The UX Book: Designing a Quality User Experience.</em> Elsevier Gezondheidszorg.
+      <br><br>5. Hertzum, M. (2020). <em>Usability testing : A practitioner's guide to evaluating the user experience.</em> Springer International Publishing AG.
+      <br><br>6. Hughes, M. (1999, November). Rigor in Usability Testing. <em>Technical Communication</em>, 46(4), 488. <a target="_blank" href="https://www.jstor.org/stable/43090399">https://www.jstor.org/stable/43090399</a>
+      <br><br>7. Nielsen, J. (2000, March 18). <em>Why you only need to test with five users.</em> Nielsen Norman Group. <a target="_blank" href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/</a>
+      <br><br>8. Nielsen, J., & Landauer, T. K. (1993). A mathematical model of the finding of usability problems. <em>In Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems (CHI '93).</em> Association for Computing Machinery. 206–213. <a target="_blank" href="https://doi.org/10.1145/169059.169166">doi.org/10.1145/169059.169166</a>
+      <br><br>9. Rubin, J. & Chisnell, D. (2008). <em>Handbook of usability testing : How to plan, design, and conduct effective tests.</em> John Wiley & Sons, Incorporated.
+      <br><br>10. Tamler, H. (1998, July). How (much) to intervene in a usability testing session. <em>Common Ground</em>, 8(3), 11–15. <a target="_blank" href="https://htamler.com/papers/intervene/">https://htamler.com/papers/intervene/</a>
+      <br><br>11. Wand, J. N., Shotts, K. W., Sekhon, J. S., Mebane, W. R., Herron, M. C., & Brady, H. E. (2001). The Butterfly Did It: The Aberrant Vote for Buchanan in Palm Beach County, Florida. <em>The American Political Science Review</em>, 95(4), 793–810. <a target="_blank" href="http://www.jstor.org/stable/3117714">http://www.jstor.org/stable/3117714</a>
+      <br><br>12. Whiteside, J., Bennett, J., & Holzblatt, K. (1988). Usability engineering: Our experience and evolution. In M. Helander (Ed.), <em>Handbook of Human-Computer Interaction</em> (pp. 791–817). Elsevier Science Publishers.
+      <br><br>13. Cirgin Ellett, M. L. DNS, RN, CGRN, & Beausang, C. C. PhD, RN. (2002). <em>Introduction to Qualitative Research. Gastroenterology Nursing</em>, 25(1), 10-14.
+      <br><br>14. Crossley, N. (2005). <em>Key concepts in critical social theory.</em> SAGE Publications.
+      <br><br>15. Ezzy, D. (2000). Illness narratives: time, hope, and HIV. <em>Social Science and Medicine</em>, 50(5). 427-444
+      <br><br>16. Ezzy, D. (2003). <em>Qualitative analysis.</em> Taylor & Francis Group.
+      <br><br>17. Gray, J. H., Densten, I. L., (1998). Integrating Quantitative and Qualitative Analysis Using Latent and Manifest Variables. <em>Quality & Quantity</em> 32, 419–431. <a target="_blank" href="https://doi.org/10.1023/A:1004357719066">doi.org/10.1023/A:1004357719066</a>
+      <br><br>18. Guest, G., MacQueen, K. M., & Namey, E. E., (2012). <em>Applied Thematic Analysis.</em> SAGE Publications Ltd.
+      <br><br>19. Miles, M., & Huberman, A. M. (1994). <em>Qualitative data analysis.</em> SAGE Publications.
+      <br><br>20. Peacock, J. L. (1986). <em>The anthropological lens: Harsh lights, soft focus.</em> Cambridge University Press.
+      <br><br>21. Segtnan, V.H., & Isaksson, T. (2000). Evaluating near Infrared Techniques for Quantitative Analysis of Carbohydrates in Fruit Juice Model Systems. <em>J. Near Infrared Spectrosc.</em> 8, 109-116 (2000)
+      <br><br>22. Wojnar, D. M., & Swanson, K. M. (2007). Phenomenology: An Exploration. <em>Journal of Holistic Nursing</em> 25(3), 172-180. <a target="_blank" href="https://doi.org/10.1177/0898010106295172">doi.org/10.1177/0898010106295172</a> 
+    </p>`,
+  },
+];
 
 document.addEventListener("DOMContentLoaded", () => {
   // Add data to each section
-  SECTIONS_LIST.forEach((section) => {
-    $(`section#${section}`).append(MOCK_DATA);
+  SECTIONS.forEach((section) => {
+    $(`section#${section.id}`).append(section.content);
   });
 
   // Set Font Size
-  $("p").css("font-size", `${fontSize}px`);
+  $("p,div.mr-auto > span").css("font-size", `${fontSize}px`);
 
   // Set Font Family
   $("p,a,span").css("font-family", fontFamily);
