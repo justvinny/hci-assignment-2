@@ -13,14 +13,19 @@ body {
 }
 
 p {
-  max-width: 1024px;
   font-size: 16px;
+}
+
+section:not(#top-container, .bg-black) {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .anchor {
   display: block;
-  height: 70px;
-  margin-top: -70px;
+  height: 100px;
+  margin-top: -100px;
   visibility: hidden;
 }
 
@@ -277,9 +282,41 @@ select.font-family {
   text-align: center;
 }
 
+.sub-header-font {
+  font-size: 1.2em;
+}
+
 @font-face {
   font-family: open-dyslexic-mono;
   src: url("../fonts/OpenDyslexicMono-Regular.otf");
+}
+
+@media (min-width: 1300px) {
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-custom .dropdown-menu {
+    position: absolute;
+  }
+  .navbar-expand-custom .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .navbar-expand-custom > .container {
+    flex-wrap: nowrap;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 900px) {
