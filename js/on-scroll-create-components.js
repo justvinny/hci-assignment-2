@@ -129,7 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fontFamily = event.currentTarget.value;
     window.localStorage.setItem(FONT_FAMILY_KEY, fontFamily);
     $("p,a,span").css("font-family", `${fontFamily}`);
-    AOS.refresh();
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
   };
 
   // Scroll Event
