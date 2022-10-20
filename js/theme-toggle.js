@@ -20,23 +20,32 @@ document.addEventListener("DOMContentLoaded", () => {
       $("button.btn-font-size")
         ?.removeClass("space-blue-bg")
         .addClass("space-blue-bg-dark");
-      $("img#introduction-image").attr("src", "assets/undraw_hello_dark.svg");
-      $("img#method-image").attr("src", "assets/undraw_processing_dark.svg");
-      $("img#findings-image").attr(
+      $("img#usability-research-image").attr(
         "src",
-        "assets/undraw_customer_survey_dark.svg"
+        "assets/undraw_hello_dark.svg"
       );
-      $("img#qualitative-analysis-image").attr(
+      $("img#method-image").attr("src", "assets/undraw_processing_dark.svg");
+      $("img#analysis-and-conclusions-image").attr(
         "src",
         "assets/undraw_segment_analysis_dark.svg"
       );
-      $("img#conclusion-image").attr("src", "assets/undraw_mic_drop_dark.svg");
+      $("img#individual-reflections-image").attr(
+        "src",
+        "assets/undraw_contemplating_dark.svg"
+      );
+      $("img#references-image").attr(
+        "src",
+        "assets/undraw_bibliophile_dark.svg"
+      );
       $("img.person-male").attr("src", "assets/undraw_male_avatar_dark.svg");
       $("img.person-female").attr(
         "src",
         "assets/undraw_female_avatar_dark.svg"
       );
       $("span.header-font.font-space-blue")
+        .removeClass("font-space-blue")
+        .addClass("font-white");
+      $("u.sub-header-font.font-space-blue")
         .removeClass("font-space-blue")
         .addClass("font-white");
     } else {
@@ -58,17 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
       $("button.btn-font-size")
         ?.removeClass("space-blue-bg-dark")
         .addClass("space-blue-bg");
-      $("img#introduction-image").attr("src", "assets/undraw_hello.svg");
+      $("img#usability-research-image").attr("src", "assets/undraw_hello.svg");
       $("img#method-image").attr("src", "assets/undraw_processing.svg");
-      $("img#findings-image").attr("src", "assets/undraw_customer_survey.svg");
-      $("img#qualitative-analysis-image").attr(
+      $("img#analysis-and-conclusions-image").attr(
         "src",
         "assets/undraw_segment_analysis.svg"
       );
-      $("img#conclusion-image").attr("src", "assets/undraw_mic_drop.svg");
+      $("img#individual-reflections-image").attr(
+        "src",
+        "assets/undraw_contemplating.svg"
+      );
+      $("img#references-image").attr(
+        "src",
+        "assets/undraw_bibliophile.svg"
+      );
       $("img.person-male").attr("src", "assets/undraw_male_avatar.svg");
       $("img.person-female").attr("src", "assets/undraw_female_avatar.svg");
       $("span.header-font.font-white")
+        .removeClass("font-white")
+        .addClass("font-space-blue");
+      $("u.sub-header-font.font-white")
         .removeClass("font-white")
         .addClass("font-space-blue");
     }

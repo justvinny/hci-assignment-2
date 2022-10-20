@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Functions
-  const isIntroductionVisible = () =>
-    $(document).scrollTop() >= $("#introduction").offset().top;
+  const isUsabilityResearchVisible = () =>
+    $(document).scrollTop() >= $("#usability-research").offset().top;
 
   const isAboutUsVisible = () =>
     $(document).scrollTop() + $(window).height() >= $("#about-us").offset().top;
@@ -91,17 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const incrementFontSize = () => {
     if (fontSize < MAX_FONT_SIZE) {
-      $("p").css("font-size", `${++fontSize}px`);
+      $("p,div.mr-auto > span").css("font-size", `${++fontSize}px`);
       $("input#input-font-size").val(fontSize);
       window.localStorage.setItem(FONT_SIZE_KEY, `${fontSize}`);
+      AOS.refresh();
     }
   };
 
   const decrementFontSize = () => {
     if (fontSize > MIN_FONT_SIZE) {
-      $("p").css("font-size", `${--fontSize}px`);
+      $("p,div.mr-auto > span").css("font-size", `${--fontSize}px`);
       $("input#input-font-size").val(fontSize);
       window.localStorage.setItem(FONT_SIZE_KEY, `${fontSize}`);
+      AOS.refresh();
     }
   };
 
@@ -127,12 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fontFamily = event.currentTarget.value;
     window.localStorage.setItem(FONT_FAMILY_KEY, fontFamily);
     $("p,a,span").css("font-family", `${fontFamily}`);
+    AOS.refresh();
   };
 
   // Scroll Event
   document.addEventListener("scroll", () => {
     if (
-      isIntroductionVisible() &&
+      isUsabilityResearchVisible() &&
       !isAboutUsVisible() &&
       !doesFloatingUpButtonExist()
     ) {
@@ -142,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $("body").append(createFontPicker());
       showOrHideFontOptions((hasAnimationDelay = false));
     } else if (
-      (!isIntroductionVisible() || isAboutUsVisible()) &&
+      (!isUsabilityResearchVisible() || isAboutUsVisible()) &&
       doesFloatingUpButtonExist()
     ) {
       [
