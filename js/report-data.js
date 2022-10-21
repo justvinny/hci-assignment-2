@@ -156,29 +156,29 @@ const SECTIONS = [
     content: `<p>
       1. Barnum, C. M. (2010). <em>Usability testing essentials : Ready, set... test!.</em> Elsevier Science & Technology.
       <br><br>2. Boren, T., & Ramey, J. (2000, October). Thinking aloud: Reconciling theory and practice. <em>IEEE Transactions on Professional Communication</em>, 43(3), 261. <a target="_blank" href="https://doi.org/10.1109/47.867942">https://doi.org/10.1109/47.867942</a>
-      <br><br>3. Ericsson, A. K., & Simon, H. A. (1993, April 13). <em>Protocol Analysis - Rev’d Edition: Verbal Reports as Data</em> (revised edition). Bradford Books.
-      <br><br>4. Hartson, R., & Pyla, P. S. (2018). <em>The UX Book: Designing a Quality User Experience.</em> Elsevier Gezondheidszorg.
-      <br><br>5. Hertzum, M. (2020). <em>Usability testing : A practitioner's guide to evaluating the user experience.</em> Springer International Publishing AG.
-      <br><br>6. Hoehle, H., & Ventakesh, V. (2015, June). Mobile Application Usability. <em>MIS Quarterly</em>, 39(2), 435–472. <a target="_blank" href="https://www.jstor.org/stable/10.2307/26628361">https://www.jstor.org/stable/10.2307/26628361</a>
-      <br><br>7. Hughes, M. (1999, November). Rigor in Usability Testing. <em>Technical Communication</em>, 46(4), 488. <a target="_blank" href="https://www.jstor.org/stable/43090399">https://www.jstor.org/stable/43090399</a>
-      <br><br>8. International Organization for Standardization. (2019, July). <em>ISO 9241-210:2019</em>. ISO. Retrieved October 20, 2022, from <a target="_blank" href="https://www.iso.org/standard/77520.html">https://www.iso.org/standard/77520.html</a>
-      <br><br>9. Nielsen, J. (2000, March 18). <em>Why you only need to test with five users.</em> Nielsen Norman Group. <a target="_blank" href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/</a>
-      <br><br>10. Nielsen, J., & Landauer, T. K. (1993). A mathematical model of the finding of usability problems. <em>In Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems (CHI '93).</em> Association for Computing Machinery. 206–213. <a target="_blank" href="https://doi.org/10.1145/169059.169166">https://doi.org/10.1145/169059.169166</a>
-      <br><br>11. Rubin, J. & Chisnell, D. (2008). <em>Handbook of usability testing : How to plan, design, and conduct effective tests.</em> John Wiley & Sons, Incorporated.
-      <br><br>12. Tamler, H. (1998, July). How (much) to intervene in a usability testing session. <em>Common Ground</em>, 8(3), 11–15. <a target="_blank" href="https://htamler.com/papers/intervene/">https://htamler.com/papers/intervene/</a>
-      <br><br>13. Wand, J. N., Shotts, K. W., Sekhon, J. S., Mebane, W. R., Herron, M. C., & Brady, H. E. (2001). The Butterfly Did It: The Aberrant Vote for Buchanan in Palm Beach County, Florida. <em>The American Political Science Review</em>, 95(4), 793–810. <a target="_blank" href="http://www.jstor.org/stable/3117714">http://www.jstor.org/stable/3117714</a>
-      <br><br>14. Whiteside, J., Bennett, J., & Holzblatt, K. (1988). Usability engineering: Our experience and evolution. In M. Helander (Ed.), <em>Handbook of Human-Computer Interaction</em> (pp. 791–817). Elsevier Science Publishers.
-      <br><br>15. Rubin, J., Chisnell, D., & Spool, J. (2011). <em>Handbook of Usability Testing</em>. John Wiley & Sons, Inc.
-      <br><br>16. Hertzum, M., Borlund, P. and Kristoffersen, K.B. (2015). <em>What do thinking-aloud participants say? A comparison of moderated and unmoderated usability sessions. International Journal of Human-Computer Interaction</em>, 31(9), pp. 557–570. <a target="_blank" href="https://doi.org/10.1080/10447318.2015.1065691">https://doi.org/10.1080/10447318.2015.1065691</a>.
-      <br><br>17. Cirgin Ellett, M. L. DNS, RN, CGRN, & Beausang, C. C. PhD, RN. (2002). <em>Introduction to Qualitative Research. Gastroenterology Nursing</em>, 25(1), 10-14.
-      <br><br>18. Crossley, N. (2005). <em>Key concepts in critical social theory.</em> SAGE Publications.
-      <br><br>19. Ezzy, D. (2000). Illness narratives: time, hope, and HIV. <em>Social Science and Medicine</em>, 50(5). 427-444
-      <br><br>20. Ezzy, D. (2003). <em>Qualitative analysis.</em> Taylor & Francis Group.
-      <br><br>21. Gray, J. H., Densten, I. L., (1998). Integrating Quantitative and Qualitative Analysis Using Latent and Manifest Variables. <em>Quality & Quantity</em> 32, 419–431. <a target="_blank" href="https://doi.org/10.1023/A:1004357719066">https://doi.org/10.1023/A:1004357719066</a>
-      <br><br>22. Guest, G., MacQueen, K. M., & Namey, E. E., (2012). <em>Applied Thematic Analysis.</em> SAGE Publications Ltd.
-      <br><br>23. Miles, M., & Huberman, A. M. (1994). <em>Qualitative data analysis.</em> SAGE Publications.
-      <br><br>24. Peacock, J. L. (1986). <em>The anthropological lens: Harsh lights, soft focus.</em> Cambridge University Press.
-      <br><br>25. Segtnan, V.H., & Isaksson, T. (2000). Evaluating near Infrared Techniques for Quantitative Analysis of Carbohydrates in Fruit Juice Model Systems. <em>J. Near Infrared Spectrosc.</em> 8, 109-116 (2000)
+      <br><br>3. Cirgin Ellett, M. L. DNS, RN, CGRN, & Beausang, C. C. PhD, RN. (2002). <em>Introduction to Qualitative Research. Gastroenterology Nursing</em>, 25(1), 10-14.
+      <br><br>4. Crossley, N. (2005). <em>Key concepts in critical social theory.</em> SAGE Publications.
+      <br><br>5. Ericsson, A. K., & Simon, H. A. (1993, April 13). <em>Protocol Analysis - Rev’d Edition: Verbal Reports as Data</em> (revised edition). Bradford Books.
+      <br><br>6. Ezzy, D. (2000). Illness narratives: time, hope, and HIV. <em>Social Science and Medicine</em>, 50(5). 427-444
+      <br><br>7. Ezzy, D. (2003). <em>Qualitative analysis.</em> Taylor & Francis Group.
+      <br><br>8. Gray, J. H., Densten, I. L., (1998). Integrating Quantitative and Qualitative Analysis Using Latent and Manifest Variables. <em>Quality & Quantity</em> 32, 419–431. <a target="_blank" href="https://doi.org/10.1023/A:1004357719066">https://doi.org/10.1023/A:1004357719066</a>
+      <br><br>9. Guest, G., MacQueen, K. M., & Namey, E. E., (2012). <em>Applied Thematic Analysis.</em> SAGE Publications Ltd.
+      <br><br>10. Hartson, R., & Pyla, P. S. (2018). <em>The UX Book: Designing a Quality User Experience.</em> Elsevier Gezondheidszorg.
+      <br><br>11. Hertzum, M. (2020). <em>Usability testing : A practitioner's guide to evaluating the user experience.</em> Springer International Publishing AG.
+      <br><br>12. Hertzum, M., Borlund, P. and Kristoffersen, K.B. (2015). <em>What do thinking-aloud participants say? A comparison of moderated and unmoderated usability sessions. International Journal of Human-Computer Interaction</em>, 31(9), pp. 557–570. <a target="_blank" href="https://doi.org/10.1080/10447318.2015.1065691">https://doi.org/10.1080/10447318.2015.1065691</a>.
+      <br><br>13. Hoehle, H., & Ventakesh, V. (2015, June). Mobile Application Usability. <em>MIS Quarterly</em>, 39(2), 435–472. <a target="_blank" href="https://www.jstor.org/stable/10.2307/26628361">https://www.jstor.org/stable/10.2307/26628361</a>
+      <br><br>14. Hughes, M. (1999, November). Rigor in Usability Testing. <em>Technical Communication</em>, 46(4), 488. <a target="_blank" href="https://www.jstor.org/stable/43090399">https://www.jstor.org/stable/43090399</a>
+      <br><br>15. International Organization for Standardization. (2019, July). <em>ISO 9241-210:2019</em>. ISO. Retrieved October 20, 2022, from <a target="_blank" href="https://www.iso.org/standard/77520.html">https://www.iso.org/standard/77520.html</a>
+      <br><br>16. Miles, M., & Huberman, A. M. (1994). <em>Qualitative data analysis.</em> SAGE Publications.
+      <br><br>17. Nielsen, J. (2000, March 18). <em>Why you only need to test with five users.</em> Nielsen Norman Group. <a target="_blank" href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/</a>
+      <br><br>18. Nielsen, J., & Landauer, T. K. (1993). A mathematical model of the finding of usability problems. <em>In Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems (CHI '93).</em> Association for Computing Machinery. 206–213. <a target="_blank" href="https://doi.org/10.1145/169059.169166">https://doi.org/10.1145/169059.169166</a>
+      <br><br>19. Peacock, J. L. (1986). <em>The anthropological lens: Harsh lights, soft focus.</em> Cambridge University Press.
+      <br><br>20. Rubin, J. & Chisnell, D. (2008). <em>Handbook of usability testing : How to plan, design, and conduct effective tests.</em> John Wiley & Sons, Incorporated.
+      <br><br>21. Rubin, J., Chisnell, D., & Spool, J. (2011). <em>Handbook of Usability Testing</em>. John Wiley & Sons, Inc.
+      <br><br>22. Segtnan, V.H., & Isaksson, T. (2000). Evaluating near Infrared Techniques for Quantitative Analysis of Carbohydrates in Fruit Juice Model Systems. <em>J. Near Infrared Spectrosc.</em> 8, 109-116 (2000)
+      <br><br>23. Tamler, H. (1998, July). How (much) to intervene in a usability testing session. <em>Common Ground</em>, 8(3), 11–15. <a target="_blank" href="https://htamler.com/papers/intervene/">https://htamler.com/papers/intervene/</a>
+      <br><br>24. Wand, J. N., Shotts, K. W., Sekhon, J. S., Mebane, W. R., Herron, M. C., & Brady, H. E. (2001). The Butterfly Did It: The Aberrant Vote for Buchanan in Palm Beach County, Florida. <em>The American Political Science Review</em>, 95(4), 793–810. <a target="_blank" href="http://www.jstor.org/stable/3117714">http://www.jstor.org/stable/3117714</a>
+      <br><br>25. Whiteside, J., Bennett, J., & Holzblatt, K. (1988). Usability engineering: Our experience and evolution. In M. Helander (Ed.), <em>Handbook of Human-Computer Interaction</em> (pp. 791–817). Elsevier Science Publishers.
       <br><br>26. Wojnar, D. M., & Swanson, K. M. (2007). Phenomenology: An Exploration. <em>Journal of Holistic Nursing</em> 25(3), 172-180. <a target="_blank" href="https://doi.org/10.1177/0898010106295172">https://doi.org/10.1177/0898010106295172</a> 
     </p>`,
   },
