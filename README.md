@@ -3,10 +3,10 @@ Assignment 2 for Human Computer Interaction paper where we conducted a moderated
 
 # How to view usability study?
 **Locally**
-Open index.html on your preferred browser.
+- Open index.html on your preferred browser.
 
 **Online**
-View our usabiltiy study online through [Netlify](https://bisque-hci.netlify.app).
+- View our usabiltiy study online through [Netlify](https://bisque-hci.netlify.app).
 
 # Team Members
 - Abby Laloli
