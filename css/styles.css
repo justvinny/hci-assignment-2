@@ -227,6 +227,11 @@ select.font-family {
   height: 250px;
 }
 
+/* References */
+section#references > p {
+  overflow-wrap: anywhere;
+}
+
 /* About Us */
 #about-us {
   width: 100%;
