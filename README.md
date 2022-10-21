@@ -1,5 +1,12 @@
 # Usability Study on the Canvas Mobile Application
-Assignment 2 for Human Computer Interaction paper where we conducted a moderated usability study for the Canvas mobile application. We gathered 6 AUT students as participants. For more information about the study, please check the live site.
+Assignment 2 for Human Computer Interaction paper where we conducted a moderated usability study for the Canvas mobile application. We gathered 6 AUT students as participants.
+
+# How to view usability study?
+**Locally**
+Open index.html on your preferred browser.
+
+**Online**
+View our usabiltiy study online through [Netlify](https://bisque-hci.netlify.app).
 
 # Team Members
 - Abby Laloli
